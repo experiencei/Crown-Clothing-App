@@ -4,8 +4,8 @@ import { withRouter } from "react-router-dom";
 import "./menu-item.styles.scss";
 
 
-const MenuItem = ({title , imageUrl ,size , linkUrl , history , match}) => {
-return <div  className={`${size} menu-item`} onClick={ () => (history.push(`${match.url}${linkUrl}`))}>
+const MenuItem = ({title , imageUrl ,size , linkUrl , history , match}) => 
+(<div  className={`${size} menu-item`} onClick={ () => (history.push(`${match.url}${linkUrl}`))}>
     <div className="background-image" style={{
     background : `url(${imageUrl})`}} />
     <div className="content">
@@ -13,5 +13,5 @@ return <div  className={`${size} menu-item`} onClick={ () => (history.push(`${ma
         <span className="subtitle">SHOP NOW</span>
     </div>
     </div>
-}
+)
 export default withRouter(MenuItem);
